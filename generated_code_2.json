@@ -1,0 +1,19 @@
+{
+    "thoughts": {
+        "arguments": {"query": ".py"}
+      }, 
+      
+    "output": [
+        {
+          "name": "read_file",
+          "reason": "After identifying potential Python files with the 'list_directory' command, I will use the 'read_file' tool to read and understand their structure.",
+          "instru0ctions": {"comment":"Use read_file for all .py files found" }, 
+           "actions": ["Use list of python files from previous output"],
+        }
+      ],
+    "action": {
+      "name": "read_file",
+       "inputs": [{"files": "$ROOT/src/*.py"} ]
+     }
+   }
+}
