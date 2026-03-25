@@ -1,35 +1,26 @@
-def get_input():
-    """
-    Get input from user
-    :return: integer value
-    """
-    while True:
-        try:
-            num = int(input("Enter a positive integer: "))
-            if num < 0:
-                raise ValueError
-            return num
-        except ValueError:
-            print("Invalid input. Please enter a positive integer.")
+# Calculator Program in Python
 
-def calculate_factorial(n):
-    """
-    Calculate the mathematical factorial of a given integer
-    :param n: integer value
-    :return: factorial value
-    """
-    if n == 0 or n == 1:
-        return 1
-    else:
-        return n * calculate_factorial(n-1)
+class Calculator:
+    def __init__(self):
+        pass
 
-def main():
-    """
-    Main function to handle program flow
-    """
-    num = get_input()
-    result = calculate_factorial(num)
-    print(f"The factorial of {num} is: {result}")
+    def add(self, x, y):
+        return x + y
+
+    def subtract(self, x, y):
+        return x - y
+
+    def multiply(self, x, y):
+        return x * y
+
+    def divide(self, x, y):
+        if y == 0:
+            raise ValueError("Cannot divide by zero!")
+        return x / y
 
 if __name__ == "__main__":
-    main()
+    calculator = Calculator()
+    print(calculator.calculate("add", 5, 3))
+    print(calculator.calculate("subtract", 10, 4))
+    print(calculator.calculate("multiply", 8, 2))
+    print(calculator.calculate("divide", 16, 4))
