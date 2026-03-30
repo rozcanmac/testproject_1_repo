@@ -1,5 +1,7 @@
 {
-  "thought": "First, I need to understand the project structure to identify where to add the new classes.",
-  "action": "repo_structure",
-  "Action Input": {}
+  "thought": "To fulfill the task requirements, I need to create or update several files in the project repository. First, I will explore the repository structure to locate or create the necessary directories and files.",
+  "action": "list_directory",
+  "actionInput": {
+    "directory_path": ""
+  }
 }
